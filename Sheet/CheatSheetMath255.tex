@@ -4,6 +4,10 @@
 \usepackage{ifthen}
 \usepackage[landscape]{geometry}
 \usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm} %needed for the proofs 
+\usepackage{amssymb}
+
 
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
 	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
@@ -66,8 +70,66 @@
 \end{center}
 
 \section{Lecture Notes 1}
+\subsection{Definitions}
+\begin{enumerate}
+	\item Cluster/limit point : Every $\varepsilon$-neighbourhood of $x$ contains a point of $S$, i.e. every neighbourhood contains infinitely many points, i.e. there exists a sequence in $S$ which converges to $x$.
+	\item Closed set $\iff$ contains all its cluster points
+	\item Interior point, i.e. $x\in S^o$ if $\exists$ $\varepsilon$ such that $B(x, \varepsilon) \subseteq S$
+	\item Isolated point if $\exists \varepsilon$ s.t. $B(x, \varepsilon) \cap S = \{x\}$
+	\item Boundary point if $\forall \varepsilon, $ $B(x, \varepsilon)\cap S \neq \emptyset$ and $B(x, \varepsilon)\cap S^c \neq \emptyset$
+	\item Closure of a set $\overline{S} = S \cup \partial S = S \cup S'$ 
+	\item \textbf{Compact} if $\{G_\alpha\}_{\alpha \in I}$ is an open cover of $S$, $\exists$ a finite subcover s.t. $S\subseteq G_{\alpha_1} \cup ... \cup G_{\alpha_n}$
+	\item Continuity:
+\end{enumerate}
+\subsection{Results}
+\begin{enumerate}
+	\item $K_n$ a sequence of compact sets s.t. $K_{n-1} \subseteq K_n$, then the intersection of all $K_n$ is compact and non-empty.
+	\item Perfect $\implies$ uncountable.
+	
+\end{enumerate}
 
 \section{Lecture Notes 2 - Metric Spaces}
+\subsection{Definitions}
+\begin{enumerate}
+	\item \textbf{Metric space} $X$:
+	\begin{enumerate}
+		\item $d(x,y) \geq 0 \forall x,y \in X$
+		\item $d(x,y) = 0 \iff x=y$
+		\item $d(x,y) = d(y,x)$
+		\item $d(x,y) \leq d(x,z) + d(z,y) \forall x,y,z \in X$
+	\end{enumerate}
+	\item Open ball in $X$: $B(x,\varepsilon) := \{ y \in X \; : \; d(x,y) < \varepsilon \} $
+	\item $S$ open in $X$ if $\forall x \in S, \; \exists \varepsilon >0 $ s.t. $\{ y\in X \mid d(x,y) <\varepsilon \}\subseteq S$
+	\item Perfect in $X$ if closed and every point is a cp.
+	\item $E \subseteq X$ is bounded if $\exists x \in X$ and $R> 0$ s.t. $\forall y \in E, \; d(x,y) < R$. 
+	\item S is dense in $X$ if $\overline{S} = X$, i.e. every $x\in S$ is a cp of $X$, i.e. $\forall x \in X, \forall \varepsilon>0, \; \exists$ a point of S in $B(x, \varepsilon)$. 
+	\item $X$ is separable if it has a countable dense subset.
+	\item $x \in X$ is a condensation point if $\forall \varepsilon>0, \; \exists$ uncountably many points of X in $B(x, \varepsilon)$.
+	\item $K\subseteq X$ is \textbf{sequentially compact} if every infinite subset E of K has a cluster point in K. That is, every sequence in K has a subsequence converging in K.
+	\item A set $S\subseteq X$ is \textbf{totally bounded} if $\forall \varepsilon > 0, \; \exists $ finitely many $x_n \in S$ s.t. $S\subseteq B(x_1, \varepsilon) \cup ... \cup B(x_N, \varepsilon)$. 
+	\item A collections of subsets of $E$ labeled as $\mathcal{F}$ has the \textbf{FIP} if whenever $F_1,...,F_n \in \mathcal{F}$, we have
+	$$\cap^n_{i=1}F_i \neq \emptyset$$
+
+\end{enumerate}
+\subsection{Results} 
+\begin{enumerate}
+	\item The union of arbitrary open sets is open.
+	\item The union of finitely many closed sets is closed.
+	\item The intersection of arbitrary closed sets is closed.
+	\item The intersection of finitely many open sets is open.
+	\item $E \subseteq Y \subseteq X$. Then $E$ is open relative to $Y \iff \exists G$ open in $X$ s.t. $E = G\cap Y$.
+	\item $f:E \rightarrow \mathbb{R}$ is continuous on $E$ if the inverse image of any open set in $\mathbb{R}$ is open relative to $E$. 
+	\item $K \subseteq Y \subseteq X$ Then K is compact relative to X $\iff$ it is compact  relative to Y.
+	\item Compact $\implies$ closed \& bounded (in any metric space).
+	\item Closed subsets of compact sets are compact.
+	\item F closed, K compact $\implies F\cap K$ compact.
+	\item \textbf{Sequentially Compact} $\iff$ \textbf{Compact}.
+	\item $K \subseteq X$, K is compact $\iff$ K is closed and every collection $\mathcal{F}$ of closed subsets of K which has the FIP satisfies $\cap_{F\in\mathcal{F}}F_i \neq \emptyset$
+	\item Totally bounded $\implies$ separable.
+	\item Sequentially compact $\implies$ separable.
+
+	
+\end{enumerate}
 
 \section{Lecture Notes 3 - Sequences \& Continuous Functions in Metric Spaces}
 
