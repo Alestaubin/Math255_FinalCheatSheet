@@ -125,8 +125,10 @@
 	\item F closed, K compact $\implies F\cap K$ compact.
 	\item \textbf{Sequentially Compact} $\iff$ \textbf{Compact}.
 	\item $K \subseteq X$, K is compact $\iff$ K is closed and every collection $\mathcal{F}$ of closed subsets of K which has the FIP satisfies $\cap_{F\in\mathcal{F}}F_i \neq \emptyset$
-	\item Totally bounded $\implies$ separable.
+	\item Totally bounded $\implies$ separable.  
 	\item Sequentially compact $\implies$ separable.
+	\item 
+	
 
 	
 \end{enumerate}
@@ -134,8 +136,43 @@
 \section{Lecture Notes 3 - Sequences \& Continuous Functions in Metric Spaces}
 
 \section{Lecture Notes 4 - Normed Vector Spaces}
+\begin{enumerate}
+	\item \textbf{Minkowsky inequality}: Let $x = (x_1, ..., x_N)$, $ y = (y_1, ..., y_N) \in \mathbb{R}^n$ and let $1 \leq p < \infty$ then, 
+
+$
+\left(\sum^N_{n=1} ( |x_n|+|y_n| )^p \right)^{1/p}  \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}+ \left( \sum^N_{n=1} |y_n|^p \right)^{1/p} 
+= \|x\|_p +\|y\|_p
+$
+	\item \textbf{Holder Inequality}: let $x,y$ be as above, $1<p,q<\infty$ be conjugate exponents $(p^{-1}+ q^{-1} = 1)$ then, 
+	
+$\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \sum^N_{n=1} |y_n|^q \right)^{1/q} = \| x\|_p \| y\|_q $
+
+\end{enumerate}
+
 
 \section{Lecture Notes 5 - Infinite Series}
+\begin{enumerate}
+	\item $\sum^\infty_{k=1} a_k $ converges $\iff$ the sequence of partial sums $s_n$ converges, where $s_n := a_1 + ... + a_n$.
+	\item Geometric series $\sum^\infty_{k=0} r^n $ converges to $\frac{1}{1-r}$ if $r<1$, diverges o.w.
+	\item Harmonic series $\sum^\infty_{k=1}\frac{1}{k}$ diverges.
+	\item $p$-series $\sum^\infty_{k=1}\frac{1}{k^p}$ converges $ \iff 1<p<\infty$.
+	\item $\sum a_k$ converges $ \implies lim_{k\rightarrow \infty} a_k = 0$.
+	\item Cauchy criterion for convergence: $\sum a_k$ converges $\iff \forall \varepsilon >0, \; \exists M\in \mathbb{N} $ s.t. $m>n\geq M  \implies |s_m -s_n| = |a_{n+1} + ...+ a_m | < \varepsilon$
+	\item Direct comparison test: $0\leq a_k\leq b_k \; \forall k>K$, then
+	
+	a) $\sum b_k$ converges $\implies \sum a_k$ converges.
+	
+	b) $\sum a_k$ diverges $\implies \sum b_k$ diverges.
+	\item Limit comparison test: $0<a_k, b_k $ s.t. $r = \lim_{k\rightarrow \infty} a_k/b_k$
+	
+	a) $r\neq 0$: $\sum a_k$ converges $\iff \sum b_k$ converges.
+	
+	b) $r = 0$: $\sum b_k$ converges $\implies \sum a_k$ converges. 
+	
+	\item $\sum a_k$ converges $\implies$ every regrouping converges.
+
+	 
+\end{enumerate}
 
 \section{Lecture Notes 6 - Integration}
 
