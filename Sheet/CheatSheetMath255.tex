@@ -127,10 +127,6 @@
 	\item $K \subseteq X$, K is compact $\iff$ K is closed and every collection $\mathcal{F}$ of closed subsets of K which has the FIP satisfies $\cap_{F\in\mathcal{F}}F_i \neq \emptyset$
 	\item Totally bounded $\implies$ separable.  
 	\item Sequentially compact $\implies$ separable.
-	\item 
-	
-
-	
 \end{enumerate}
 
 \section{Lecture Notes 3 - Sequences \& Continuous Functions in Metric Spaces}
@@ -147,8 +143,21 @@ $
 	
 $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \sum^N_{n=1} |y_n|^q \right)^{1/q} = \| x\|_p \| y\|_q $
 	\item $\|\cdot \|_A $ and $\| \cdot\|_B$ are \textbf{equivalent norms} if $\exists c_1, c_2>0$ s.t. $\forall x \in X,$ $\| x\|_A\leq c_1 \| x\|_B$ and $\|x\|_B \leq c_2\|x\|_A$
-	\item All norms are equivalent in $\mathbb{R}^N$. 
-	\item $T: X \rightarrow Y$ is bounded if $\exists c>0$ s.t. $\|T(x)\|_Y \leq c\|x\|_X \; \forall x \in X$
+	\item All norms are equivalent in $\mathbb{R}^N$ and on finite v.s. 
+	\item $T: X \rightarrow Y$ is bounded if $\exists c>0$ s.t. $\|T(x)\|_Y \leq c\|x\|_X \; \forall x \in X$.
+	\item $T: X\rightarrow Y$, TFAE:
+	
+	a) T is bounded
+	
+	b) T is cts at all points in X
+	
+	c) T is cts at $x=0$
+	\item X f.d. v.s. $\implies T:X \rightarrow Y $ is bounded.
+	\item \textbf{Operator norm}: $\| T\|_{op} = \sup_{x\neq 0} \frac{ \|T(x) \|_Y}{\| x \|_X} = \sup_{\|x\|_X = 1} \|T(x)\|_Y = \inf \{ c\geq 0 \mid \|T(x)\|_Y\leq c\|x\|_X \forall x\} $
+	\item $F: X\rightarrow Y$, $U\subseteq X$ open, $p \in U$, then $F$ is differentiable at $p$ if $\exists$ bounded linear operator $T: X \rightarrow Y$ s.t.
+	$$\lim_{h\rightarrow 0} \frac{\|F(p+h) -F(p) -T(h) \|_Y}{\|h\|_X} = 0 $$
+	Then, $T$ is the \textbf{derivative} of $F$ at $p$. 
+	 
 \end{enumerate}
 
 
@@ -158,7 +167,7 @@ $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \
 	\item Geometric series $\sum^\infty_{k=0} r^n $ converges to $\frac{1}{1-r}$ if $r<1$, diverges o.w.
 	\item Harmonic series $\sum^\infty_{k=1}\frac{1}{k}$ diverges.
 	\item $p$-series $\sum^\infty_{k=1}\frac{1}{k^p}$ converges $ \iff 1<p<\infty$.
-	\item $\sum a_k$ converges $ \implies lim_{k\rightarrow \infty} a_k = 0$.
+	\item $\sum a_k$ converges $ \implies \lim_{k\rightarrow \infty} a_k = 0$.
 	\item Cauchy criterion for convergence: $\sum a_k$ converges $\iff \forall \varepsilon >0, \; \exists M\in \mathbb{N} $ s.t. $m>n\geq M  \implies |s_m -s_n| = |a_{n+1} + ...+ a_m | < \varepsilon$
 	\item Direct comparison test: $0\leq a_k\leq b_k \; \forall k>K$, then
 	
@@ -181,10 +190,63 @@ $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \
 	
 	\item Absolute convergence $\implies $ convergence
 	
+	\item Ratio test: let $a_k \neq 0$, s.t. $\lim_{k \rightarrow \infty} \frac{|a_{k+1}|}{ |a_k|} = r $, then if
+	
+	a) $r<1, \; \sum a_k$ converges abs.
+	
+	b) $r>0, \; \sum a_k$ diverges.
+	
+	c) $r=0$, inconclusive.  
+	
+	\item Alternating series test: $a_k\geq 0 $ non-increasing converging to 0. Then $\sum (-1)^{k+1} a_k$ converges. 
+
+	
+	\item \textbf{Dirichlet's test}: $a_k$ a decreasing sequence s.t. $\lim_{n\rightarrow \infty} a_k = 0$ and $b_k$ s.t. the partial sums of $b_k$ are bounded. Then $\sum a_k b_k$ converges.
+	
+	\item \textbf{Abel's test}: $a_k$ a convergent monotone sequence, $\sum b_k$ converges, then $\sum a_k b_k $ converges. 
+	
+	\item $a_k$ converges absolutely $\implies$ every rearrangement of $a_k$ converges to the same point. 
+	\item $a_k$ converges conditionally, $\alpha$ any real number. Then there exists a rearrangement of $a_k$ which converges to $\alpha$.
 	 
 \end{enumerate}
 
 \section{Lecture Notes 6 - Integration}
 
+\begin{enumerate}
+	\item Tagged partition $\dot{P}$ on $[a,b]$ is defined as $\{[x_{i-1}, x_i ], t_i\}^n_{i=0}$ where $t_i$ is the point chosen for the subinterval.
+	\item $\|\dot{P} \| = \max \{[x_{i-1}, x_i ]\}^n_{i=0}$
+	\item \textbf{Riemann sum} $S(f, \dot{P}) := \sum^n_{i=1} f(t_i)( x_i -x_{i-1})$.
+	\item $f \in R[a,b]$ if $\exists L \in \mathbb{R}$ s.t. $\forall \varepsilon > 0, \exists \delta_\varepsilon$ s.t. if $\|\dot{P}\| < \delta_\varepsilon$, $$|S(f, \dot{P})- L| < \varepsilon$$
+	Then, $L$ is the \textit{unique} integral. 
+	\item Let $f,g \in R[a,b]$, then
+	
+	a) $\int^b_a kf = k \int^b_a f$
+	
+	b) $\int^b_a f+g = \int^b_a f + \int^b_a g $
+	
+	c) $f(x) \leq g(x) \forall x \in [a,b] \implies \int^b_a f \leq \int^b_a g$
+	6
+	\item $f\in R[a,b] \implies f $ bounded on $[a,b]$ 
+	
+	\item \textbf{Cauchy criterion}: $f \in R[a,b] \iff \forall \varepsilon >0, \exists \mu_\varepsilon$ s.t. if $\|\dot{P} \| , \| \dot{Q}\| < \mu_\varepsilon$, then 
+	$$| S(f, \dot{P} ) - S(f, \dot{Q} ) | \leq \varepsilon$$
+	
+	\item \textbf{Squeeze}: $f\in R[a,b] \iff \forall \varepsilon > 0, \exists \alpha, \omega \in R[a,b]$ s.t. 
+	$$\alpha(x) \leq f(x) \leq \omega(x) \quad \forall x \in[a,b]$$
+	and such that
+	$$\int^b_a (\omega- \alpha ) < \varepsilon $$
+	
+	\item $f:[a,b] \rightarrow \mathbb{R}$ cts $\implies$ $f\in R[a,b]$.
+	\item $f\in R[a,b] \implies \forall c \in [a,b], \; f|_{[a,c]} \land f|_{[c,b]}$ are Riemann integrable and in particular
+	$$\int^b_a f = \int^c_a f + \int^b_c f$$
+\end{enumerate}
+
 \end{multicols}
 \end{document}
+
+
+
+
+
+
+
