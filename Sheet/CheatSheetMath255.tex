@@ -146,7 +146,9 @@ $
 	\item \textbf{Holder Inequality}: let $x,y$ be as above, $1<p,q<\infty$ be conjugate exponents $(p^{-1}+ q^{-1} = 1)$ then, 
 	
 $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \sum^N_{n=1} |y_n|^q \right)^{1/q} = \| x\|_p \| y\|_q $
-
+	\item $\|\cdot \|_A $ and $\| \cdot\|_B$ are \textbf{equivalent norms} if $\exists c_1, c_2>0$ s.t. $\forall x \in X,$ $\| x\|_A\leq c_1 \| x\|_B$ and $\|x\|_B \leq c_2\|x\|_A$
+	\item All norms are equivalent in $\mathbb{R}^N$. 
+	\item $T: X \rightarrow Y$ is bounded if $\exists c>0$ s.t. $\|T(x)\|_Y \leq c\|x\|_X \; \forall x \in X$
 \end{enumerate}
 
 
@@ -163,14 +165,22 @@ $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \
 	a) $\sum b_k$ converges $\implies \sum a_k$ converges.
 	
 	b) $\sum a_k$ diverges $\implies \sum b_k$ diverges.
-	\item Limit comparison test: $0<a_k, b_k $ s.t. $r = \lim_{k\rightarrow \infty} a_k/b_k$
+	\item Limit comparison test 1: $0<a_k, b_k $ s.t. $r = \lim_{k\rightarrow \infty} a_k/b_k$
 	
 	a) $r\neq 0$: $\sum a_k$ converges $\iff \sum b_k$ converges.
 	
 	b) $r = 0$: $\sum b_k$ converges $\implies \sum a_k$ converges. 
+	\item Limit comparison test 2: $a_k, b_k $ s.t. $r = \lim_{k\rightarrow \infty} |a_k|/|b_k|$
+	
+	a) $r\neq 0$: $\sum a_k$ converges abs. $\iff \sum b_k$ conv. abs.
+	
+	b) $r = 0$: $\sum b_k$ converges abs. $\implies \sum a_k$ converges abs. 
+
 	
 	\item $\sum a_k$ converges $\implies$ every regrouping converges.
-
+	
+	\item Absolute convergence $\implies $ convergence
+	
 	 
 \end{enumerate}
 
