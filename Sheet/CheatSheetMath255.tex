@@ -157,6 +157,17 @@
 	\item $f: X \rightarrow Y$ is cts $\iff \forall p_n \rightarrow p \in X, $ we have $f(p_n) \rightarrow f(p) \in Y$. 
 	
 	\item Let $X$ cpt m.s., if $f: X \rightarrow Y$ is cts, then $f(X) \subseteq Y$ is cpt.
+	
+	\item $f:X \rightarrow Y$ is \textbf{Uniformly continuous} if $\forall \varepsilon, \; \exists \delta > 0 $ s.t. $\forall p,q \in X$
+		$$d_X( p,q) < \delta \implies d_Y(f(p), f(q)) < \varepsilon $$
+
+	\item $X$ cpt and $f: X \rightarrow Y \implies \; f$ uniformly cts. 
+	
+	\item \textbf{Contraction}: $X$ a complete m.s. and $f: X\rightarrow X$ s.t. for $0< \alpha< 1 $, 
+	$$d(f(x), f(y)) \leq \alpha d(x,y) \; \forall x,y \in X$$
+	
+	\item The Banach Fixed Point Theorem: Let $f$ a contraction on a complete metric space. Then there exists a unique $x \in X$ such that $f(x) = x$.
+	
 \end{enumerate}
 
 \section{Lecture Notes 4 - Normed Vector Spaces}

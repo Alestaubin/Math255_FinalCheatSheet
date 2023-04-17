@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.10)  16 APR 2023 22:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.10)  16 APR 2023 22:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,9 +446,9 @@ Package rerunfilecheck Info: File `CheatSheetMath255.out' has not changed.
 (rerunfilecheck)             Checksum: 12DE94C8D3475A73E1A3316772B18891;1826.
  ) 
 Here is how much of TeX's memory you used:
- 9477 strings out of 476093
- 146980 string characters out of 5791585
- 1919793 words of memory out of 5000000
+ 9481 strings out of 476093
+ 147008 string characters out of 5791585
+ 1922793 words of memory out of 5000000
  29658 multiletter control sequences out of 15000+600000
  518211 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -467,10 +467,10 @@ xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on CheatSheetMath255.pdf (2 pages, 179659 bytes).
+Output written on CheatSheetMath255.pdf (2 pages, 180602 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
