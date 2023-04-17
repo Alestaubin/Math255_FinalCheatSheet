@@ -131,6 +131,34 @@
 
 \section{Lecture Notes 3 - Sequences \& Continuous Functions in Metric Spaces}
 
+\begin{enumerate}
+	\item $a_n$ converges to $a$ if $\forall \varepsilon >0, \; \exists N$ s.t. $n\geq N \implies d(a_n, a) < \varepsilon$
+	
+	\item X a compact metric space $\implies$ every sequence in X has a convergent subsequence to a point in X.
+	
+	\item $p_n \in X$ cpt m.s. then the set of subsequential limits is closed.
+	
+	\item \textbf{Cauchy sequence}: A sequence $p_n$ in a metric space $(X, d)$ is Cauchy if for every $\varepsilon >0, \; \exists N$ s.t. $n\geq m\geq N \implies d(p_n, p_m) < \varepsilon$
+	
+	\item Convergent $\implies$ Cauchy.
+	\item $X$ cpt $\implies$ every Cauchy sequence converges to a point in $X$.
+	
+	\item \textbf{Complete} m.s. if every Cauchy sequence converges.
+	
+	\item $E\subseteq X, \; f: E\rightarrow Y$, $\lim_{n\rightarrow p} f(x) = q$ if $\forall \varepsilon>0, \exists \delta$ s.t. 
+	$$d_X(x, p) < \delta \implies d_Y(f(x), q ) < \varepsilon$$
+	
+	\item $\lim_{x\rightarrow p} f(x) = q \iff \forall p_n \neq p$ s.t. $\lim_{n\rightarrow \infty} p_n = p$, we have $\lim_{n\rightarrow \infty} f(p_n) = q$.
+	
+	\item $f: X\rightarrow Y$ cts at p $\forall \varepsilon> 0, \exists \delta >0$ s.t. if $ d_X(x, p) < \delta \implies d_Y(f(x), f(p)) < \varepsilon$.
+	
+	\item $f: X\rightarrow Y$ is cts $\iff \forall$ open set $V \in Y$, $f^{-1}(V)$ is open in $X$.
+	
+	\item $f: X \rightarrow Y$ is cts $\iff \forall p_n \rightarrow p \in X, $ we have $f(p_n) \rightarrow f(p) \in Y$. 
+	
+	\item Let $X$ cpt m.s., if $f: X \rightarrow Y$ is cts, then $f(X) \subseteq Y$ is cpt.
+\end{enumerate}
+
 \section{Lecture Notes 4 - Normed Vector Spaces}
 \begin{enumerate}
 	\item \textbf{Minkowsky inequality}: Let $x = (x_1, ..., x_N)$, $ y = (y_1, ..., y_N) \in \mathbb{R}^n$ and let $1 \leq p < \infty$ then, 
@@ -216,6 +244,9 @@ $\sum^N_{n=1} |x_n| |y_n| \leq \left( \sum^N_{n=1} |x_n|^p \right)^{1/p}\left( \
 	\item Tagged partition $\dot{P}$ on $[a,b]$ is defined as $\{[x_{i-1}, x_i ], t_i\}^n_{i=0}$ where $t_i$ is the point chosen for the subinterval.
 	\item $\|\dot{P} \| = \max \{[x_{i-1}, x_i ]\}^n_{i=0}$
 	\item \textbf{Riemann sum} $S(f, \dot{P}) := \sum^n_{i=1} f(t_i)( x_i -x_{i-1})$.
+	
+	$$\lim_{n\rightarrow \infty}\sum^n_{i=1} f(x_i) \Delta x = \int^b_a f(x)dx$$
+	where $\Delta x = \frac{b-a}{n}$ and $x_i = a + i\Delta x$
 	\item $f \in R[a,b]$ if $\exists L \in \mathbb{R}$ s.t. $\forall \varepsilon > 0, \exists \delta_\varepsilon$ s.t. if $\|\dot{P}\| < \delta_\varepsilon$, $$|S(f, \dot{P})- L| < \varepsilon$$
 	Then, $L$ is the \textit{unique} integral. 
 	\item Let $f,g \in R[a,b]$, then
